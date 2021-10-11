@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    text-align: center;
+}
+.grid-container {
+    display: grid;
+    grid-template: 
+        "navbar" auto
+        "main" auto
+        "footer" auto;
+}
+.grid-container-form {
+    display: grid;
+    gap: 10px;
+    text-align: center;
+    grid-template: 
+    "navbar" 80px
+    "main" auto
+    "footer" 100px
+}
+.navbar{
+    grid-area: navbar;
+}
+.navbar-expand-md a {
+    text-decoration: none;
+}
+.nav-item {
+    font-family: 'Besley', serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color:black;
+    padding: 50px;
+}
+.enlaces {
+    font-family: 'Besley', serif;
+    text-decoration: none;
+    color:black;
+    padding: 50px;
+    font-size: 1.2rem;
+}
+.enlaces-mobile {
+    display: none;
+}
+.enlaces-mobile a {
+    display: flex;
+    color: white;
+}
+.enlaces:hover {
+    color: blue;
+}
+.logo:hover {
+    color: blue;
+}
+.logo {
+    font-family: 'Allison', cursive;
+    font-size: 60px;
+    text-decoration: none;
+    color: black;
+}
+.main {
+    height: 70vh;
+    background-image: url(img/paisaje5.jpg);
+    background-size: cover;
+}
+.contenido-home {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+    padding: 10px;
+}
+.contenido-galeria{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: white;
+    justify-content: center;
+}
+.redes {
+    padding: 40px;    
+}
+.redes p {
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.mapa {
+    box-shadow: 0 0 2em;
+}
+.video {
+    box-shadow: 0 0 2em;
+}
+.autor{
+    padding: 15px;
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+    color: white; 
+    justify-content: center;
+    font-family: 'Carattere';
+}
+.form {
+    background-image: url(img/paisaje5.jpg);
+    background-size: cover;
+}
+.main-form {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    margin: 10px auto;
+    border-radius: 10px;
+    padding: 30px;   
+    text-align: left;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+.main-galeria {
+    background-image: url(img/paisaje5.jpg);
+    background-size: cover;
+}
+.contenedor {
+    margin: 0 auto;
+}
+.caja {
+    background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+    background-blend-mode: screen;
+    float: left;
+    width: 20%;
+    height: 400px;
+}
+.caja-impar {
+    background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+    background-blend-mode: screen;
+    float: left;
+    width: 20%;
+    height: 400px;
+}
+.texto-caja {
+    margin: 10px;
+}
+.fotos-parrafo {
+    width: 340px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0 0 1em;
+}
+.texto-caja {
+    text-align: justify;
+    margin: 20px;
+}
+.titulo-caja {
+    margin: 15px;
+}
+
+
+/*Medias Queries*/
+
+/*Desktop 1280 x 800*/
+@media(max-width:800px){
+    .contenedor {
+        max-width: 50%;
+    }
+    .navbar {
+        max-width: 100%;
+    }
+}
+
+/*Tablet 1024 x 1366*/
+@media(max-width:1024px){
+    html {
+        height: 90%;
+    }
+    .contenedor {
+        max-width: 80%;
+    }
+    .navbar {
+        max-width: 100%;
+    }
+    .contenido {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: space-around;
+        padding: 10px;
+    }
+    .caja {
+        width: 50%;
+        margin 0 auto;
+        border-bottom: solid black;        
+    }
+    .caja-impar {
+        width: 50%;
+        border-bottom: solid black;  
+        border-right: solid black;
+    }
+}
+
+/*Mobile 375 x 812*/
+@media(max-width:812px){
+    .contenedor {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .caja {
+        width: 100%;
+        border-bottom: solid black;
+    }
+    .caja-impar {
+        width: 100%;
+        border-right: none;
+    }
+    .enlaces {
+        display: none;
+    }
+    .nav-item {
+        display: none;
+    }
+    .enlaces-mobile {
+        display: initial;
+    }
+    .enlaces-mobile a {
+        transition: 3s;
+        margin: 0 auto;
+        padding: 15px;
+        background-color: black;        
+    }
+    .mapa, .video {
+        display: none;
+    }
+    .autor {
+        display: inline-block;
+        width: 100%;
+    }
+    .parrafo-redes {
+        display: none;
+    }
+    .contenido-home {
+        grid-template-columns: auto;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .redes {
+        margin: 0 auto;
+        padding: 10px;
+    } 
+}
